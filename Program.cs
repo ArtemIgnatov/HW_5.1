@@ -12,17 +12,16 @@ namespace HW_5._1
             }
         }
 
-        static string[] Get(string Str)
+        static string[] SplitWord(string text)
         {
-            string[] strNew = Str.Split(' ','.',',','?','!');
-            return strNew;
+            string[] wordsSplit = text.Split(' ', ',', '.', '!', '?');
+            return wordsSplit;
         }
-
         static void Main(string[] args)
         {
             Console.WriteLine("Введите текст.");
             string a = Console.ReadLine();
-            string[] subs = Get(a);
+            string[] subs = SplitWord(a);
             Print(subs);    
             
             Console.ReadKey();
